@@ -1,12 +1,63 @@
-.grid-container {
+html, body {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    color: black;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#header {
+    background-color:white;
+    grid-area: h;
+    text-align:center;
+    align-items: center;
+}
+
+#sidebar {
+    background-color:white;
+    grid-area: s;
+}
+
+#thestuff {
+    background-color:white;
+    grid-area: ss;
+}
+
+#footer {
+    background-color:white;
+    grid-area: f;
+}
+
+#logo img {
+    grid-area: logo;
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-container-1 div {
+    border: 1px solid black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+ 
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
     grid-template-areas: 
-    "red red orange yellow"
-    "green green green blue"
-    "indigo indigo violet violet"
-    "black black black black";
+    "logo h h h h"
+    "s ss ss ss ss"
+    "s ss ss ss ss"
+    "s ss ss ss ss"
+    "f f f f f"
+    ;
     width: 100vw;
     height: 100vh;
 }
+
+/* For when logo gets wonky, gets rid of it */
