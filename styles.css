@@ -1,0 +1,12 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+    grid-template-areas: 
+    "red red orange yellow"
+    "green green green blue"
+    "indigo indigo violet violet"
+    "black black black black";
+    width: 100vw;
+    height: 100vh;
+}
