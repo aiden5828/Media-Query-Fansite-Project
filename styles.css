@@ -11,6 +11,10 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    text-align: center;
+}
+
 #header {
     background-color:white;
     grid-area: h;
@@ -19,8 +23,11 @@ h1 {
 }
 
 #sidebar {
+    display: flex;
+    flex-direction: column;
     background-color:white;
     grid-area: s;
+    padding: 10px;
 }
 
 #thestuff {
@@ -47,7 +54,7 @@ h1 {
 .grid-container-1 {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     gap: 3px;
     grid-template-areas: 
     "logo h h h h"
@@ -56,8 +63,40 @@ h1 {
     "s ss ss ss ss"
     "f f f f f"
     ;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    /* height: 100vh; */
 }
 
 /* For when logo gets wonky, gets rid of it */
+@media (width < 1300px) {
+    .grid-container-1 {
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+        
+        grid-template-areas:
+            "h h h h"
+            "s ss ss ss"
+            "s ss ss ss"
+            "s ss ss ss"
+            "f f f f";
+    }
+
+    #logo {
+        display: none;
+    }
+}
+
+
+.content-block {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.content-block img {
+    width: 300px;
+    height: auto;
+}
+
+.content-block p {
+    font-size: 18px;
+}
